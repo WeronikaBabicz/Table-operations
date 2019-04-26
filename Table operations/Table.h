@@ -32,7 +32,7 @@ public:
 	int getValueOfCell(int indexOfCell);
 	void redefineTableValuesBasedOnOtherTable(Table & baseTable);
 	string getInfoOfTable();
-	void setName(string sName);
+	void setName(string newName);
 	int getMaxValueInTable();
 
 private:

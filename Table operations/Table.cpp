@@ -40,15 +40,15 @@ void Table::setSize(int newSize)
 {
 	if (newSize > 0)
 	{
-		int * pi_new_table = new int[newSize];
+		int * newValues = new int[newSize];
 		for (int i = 0; i < newSize && i < length; i++)
 		{
-			pi_new_table[i] = values[i];
+			newValues[i] = values[i];
 		}
 		length = newSize;
 
 		delete[] values;
-		values = pi_new_table;
+		values = newValues;
 
 	}
 	else

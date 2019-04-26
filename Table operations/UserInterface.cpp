@@ -86,7 +86,7 @@ void UserInterface::addTable()
 		}
 		else
 		{
-			cout << NOT_ADDED_TABLE_ERROR << endl;
+			cout << TABLE_NOT_ADDED_ERROR << endl;
 		}
 	}
 }
@@ -106,7 +106,7 @@ void UserInterface::deleteTable()
 	}
 	else
 	{
-		cout << TABLE_NOT_FOUND_ERROR << NOT_DELETED_TABLE_ERROR << endl;
+		cout << TABLE_NOT_FOUND_ERROR << TABLE_NOT_DELETED_ERROR << endl;
 	}
 }
 

@@ -26,8 +26,8 @@ const string CHANGED_CELL_VALUE = "Cell's value changed!";
 
 const string OPERATION_NOT_FOUND_ERROR = "Operation not found!!! ";
 const string TABLE_NOT_FOUND_ERROR = "Table not found!!! ";
-const string NOT_ADDED_TABLE_ERROR = "Table not added!!! ";
-const string NOT_DELETED_TABLE_ERROR = "Table not deleted!!! ";
+const string TABLE_NOT_ADDED_ERROR = "Table not added!!! ";
+const string TABLE_NOT_DELETED_ERROR = "Table not deleted!!! ";
 const string REDEFINING_ERROR = "Table not redefined!!! ";
 const string TABLE_LENGTH_NOT_CHANGED_ERROR = "Table's length not changed!!! ";
 const string TABLE_NAME_NOT_CHANGED = "Table's name not changed!!! ";
