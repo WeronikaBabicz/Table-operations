@@ -3,7 +3,7 @@
 
 void UserInterface::runUserInterface()
 {
-	loadOperationNumberFromUser();
+	loadInterfaceOperationNumberFromUser();
 	while (operationNumber != 10)
 	{
 		switch (operationNumber)
@@ -36,15 +36,14 @@ void UserInterface::runUserInterface()
 			showMaxValueInTable();
 			break;
 		}
-		loadOperationNumberFromUser();
+		loadInterfaceOperationNumberFromUser();
 	}
 	deleteAllTables();
 }
 
 void UserInterface::addTable()
 {
-	cout << ADD_TABLES << endl;
-	operationNumber = getInt();
+	loadAddingOperationFromUser();
 	if (operationNumber == 1)
 	{
 		Table *table = new Table();
@@ -253,8 +252,9 @@ void UserInterface::getMaxValueInTable(Table * table)
 }
 
 
-void UserInterface::loadOperationNumberFromUser()
+void UserInterface::loadInterfaceOperationNumberFromUser()
 {
+	cout << ENTER_OPERATION_NUMBER << endl;
 	cout << ALL_OPERATIONS << endl;
 	operationNumber = getInt();
 	while ((operationNumber > OPERATIONS_COUNT) || (operationNumber < 0))
@@ -263,6 +263,23 @@ void UserInterface::loadOperationNumberFromUser()
 		cin.ignore(100, '\n');
 		cout << OPERATION_NOT_FOUND_ERROR << endl;
 		cout << ALL_OPERATIONS << endl;
+		operationNumber = getInt();
+	}
+	cin.clear();
+	cin.ignore();
+}
+
+void UserInterface::loadAddingOperationFromUser()
+{
+	cout << ENTER_OPERATION_NUMBER << endl;
+	cout << ADD_TABLES << endl;
+	operationNumber = getInt();
+	while ((operationNumber > ADDING_OPERATIONS_COUNT) || (operationNumber < 0))
+	{
+		cin.clear();
+		cin.ignore(100, '\n');
+		cout << OPERATION_NOT_FOUND_ERROR << endl;
+		cout << ADD_TABLES << endl;
 		operationNumber = getInt();
 	}
 	cin.clear();
